@@ -75,7 +75,7 @@ pipeline {
             }
             steps {
                 echo "Check that '${env.PRJ}.${env.DOMAIN}' returns HTTP 200"
-                sh "curl -v --fail ${env.PRJ}.${env.DOMAIN}"
+                sh "curl -v --fail ${env.PRJ}.${env.DOMAIN} -I"
             }
         }
     }
